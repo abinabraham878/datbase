@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>uploader</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>Upload Image</ion-label>
+  <input type="file" name="browse" (change)="fileup($event)">
+  <img src="https://ucarecdn.com/{{pic}}/" alt="" *ngIf="pic">
+  <ion-label>Description</ion-label><br>
+  <textarea [(ngModel)]="description" name="Description"></textarea>
+  <ion-button  color="danger" (click)="desc()">Post</ion-button>
+</ion-content>
